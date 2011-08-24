@@ -64,22 +64,22 @@ public class FixedWidthFFParser extends FFParser {
     }
 
     public static void main(String[] args) throws Exception {
-//        FixedWidthFFParser f = new FixedWidthFFParser(
-//                new File("Produtos_materiais20100830142812.txt"),
-//                new int[]{15,50,90,2}, //columns
-//                1, //header lines
-//                "\r\n".length());
-//        long time = System.currentTimeMillis();
-//       while(f.next()){
-////           System.out.println(f.getString(1)+"!");
-//       }
-//        System.out.println("Time: " + (System.currentTimeMillis()-time));
+        FixedWidthFFParser f = new FixedWidthFFParser(
+                new File("Produtos_materiais20100830142812.txt"),
+                new int[]{15,50,90,2}, //columns
+                0, //header lines
+                "\n".length());
+        long time = System.currentTimeMillis();
+       while(f.next()){
+           System.out.println(f.getString(1)+"!");
+       }
+        System.out.println("Time: " + (System.currentTimeMillis()-time));
 
 //        System.out.println("e .6  .".length());
-        Pattern p = Pattern.compile("^(.{3})", Pattern.DOTALL);
-        Matcher matcher = p.matcher("e\n.");
-        matcher.find();
-        System.out.println(matcher.group()+")");
+//        Pattern p = Pattern.compile("^(.{3})", Pattern.DOTALL);
+//        Matcher matcher = p.matcher("e\n.");
+//        matcher.find();
+//        System.out.println(matcher.group()+")");
     }
 
 }
