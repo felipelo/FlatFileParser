@@ -1,4 +1,4 @@
-package br.com.idealogic.flatfileparser;
+package br.com.personal.flatfileparser;
 
 import java.io.File;
 import java.io.IOException;
