@@ -3,8 +3,6 @@ package br.com.personal.flatfileparser;
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  *
@@ -26,8 +24,8 @@ public class FixedWidthFFParser extends FFParser {
         }
         value = new char[lineLenght];
 
-        for( int _x = 0; _x < header; _x++ )
-            bis.read(value);
+//	for( int _x = 0; _x < header; _x++ )
+//	    bis.read(value);
     }
 
     @Override
@@ -68,7 +66,7 @@ public class FixedWidthFFParser extends FFParser {
                 new File("Produtos_materiais20100830142812.txt"),
                 new int[]{15,50,90,2}, //columns
                 0, //header lines
-                "\n".length());
+                "\r\n".length());
         long time = System.currentTimeMillis();
        while(f.next()){
            System.out.println(f.getString(1)+"!");
